@@ -18,10 +18,23 @@ while (condition) {
             default: "fasle",
         }
     ]);
-    //       Arrey:
-    todolist.push(answer.todo);
-    //       loop:
-    condition = answer.moretodo;
-    //       console arrey: 
-    console.log(todolist);
+    const { todo, moretodo } = answer;
+    console.log(answer);
+    condition = moretodo;
+    if (todo) {
+        todolist.push(todo);
+    }
+    else {
+        console.log("\nkindly add valid input\n");
+    }
+    if (todolist.length > 0) {
+        console.log("your todo list :");
+        todolist.forEach(todo => {
+            console.log(todo);
+        });
+    }
+    else {
+        console.log(" No todo found");
+    }
 }
+;
